@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Tech Hub</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: color 0.5s, background-color 0.5s;
+        }
+
+        :root {
+            --background-color-light: #f8f8f8;
+            --background-color-dark: #333;
+            --text-color-light: #333;
+            --text-color-dark: #fff;
+        }
+
+        body.light-mode {
+            color: var(--text-color-light);
+            background-color: var(--background-color-light);
+        }
+
+        body.dark-mode {
+            color: var(--text-color-dark);
+            background-color: var(--background-color-dark);
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .about-us {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .about-us h2 {
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+        }
+
+        section {
+            text-align: center;
+            padding: 2em;
+        }
+
+        .features-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .feature-item {
+            text-align: left;
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .know-more-btn {
+            display: inline-block;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .know-more-btn:hover {
+            background-color: #45a049;
+        }
+
+        .testimonial {
+            background-color: #f4f4f4;
+            padding: 2em;
+            margin: 1em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback {
+            background-color: #f8f8f8;
+            padding: 2em;
+            margin: 1em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .feedback button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .contact {
+            background-color: #333;
+            color: white;
+            padding: 2em;
+            margin: 1em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body class="light-mode">
+    <button class="mode-toggle" onclick="toggleDarkMode()">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <header>
+        <h1>Mobile Tech Hub</h1>
+        <p>Explore the latest in mobile technology</p>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>Follow us on social media for the latest updates!</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-content">
+            <div class="feature-item">
+                <h2>Ultra-fast processors</h2>
+                <img src="processor.jpg" alt="Processor Image">
+                <p>Experience lightning-fast performance with our cutting-edge processors.</p>
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+            <div class="feature-item">
+                <h2>High-resolution displays</h2>
+                <img src="display.jpg" alt="Display Image">
+                <p>Enjoy crystal-clear visuals on our high-resolution displays.</p>
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+            <div class="feature-item">
+                <h2>Advanced camera systems</h2>
+                <img src="camera.jpeg" alt="Camera Image">
+                <p>Capture stunning moments with our advanced camera systems.</p>
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+            <div class="feature-item">
+                <h2>Long-lasting battery life</h2>
+                <img src="battery.jpg" alt="Battery Image">
+                <p>Stay powered throughout the day with our long-lasting battery technology.</p>
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+            <div class="feature-item">
+                <h2>Wireless Charging</h2>
+                <img src="wireless.jpg" alt="Wireless Charging Image">
+                <p>Charge your device effortlessly with wireless charging technology.</p>
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+            <div class="feature-item">
+                <h2>5G Connectivity</h2>
+                <img src="5g.jpg" alt="5G Connectivity Image">
+                <p>Experience lightning-fast 5G connectivity for seamless internet browsing and streaming.</p>
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <h2>What Our Customers Say</h2>
+        <p>"The mobile tech from Mobile Tech Hub changed the way I experience technology. It's simply amazing!"</p>
+        <p>- Happy Customer</p>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback">
+        <h2>Feedback</h2>
+        <textarea placeholder="Enter your feedback..." rows="4"></textarea>
+        <button type="submit">Submit Feedback</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: infomobiletech@gmail.com</p>
+        <p>Phone: 7934582765</p>
+        <p>Address: tilak street, mumbai, maharashtra</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Mobile Tech Hub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to Toggle Dark Mode -->
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const currentTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            body.classList.remove(`${currentTheme}-mode`);
+            body.classList.add(`${newTheme}-mode`);
+
+            // Change icon based on the selected theme
+            const modeToggle = document.querySelector('.mode-toggle');
+            modeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        }
+    </script>
+</body>
+
+</html>
